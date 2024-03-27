@@ -1,0 +1,80 @@
+datum: 21-03-2024
+
+Wordpress Fetum website. Gemaakt met Oxygen webbuilder en oxygen elements voor woocommerce
+Dus nodig:
+Wordpress
+Oxygen
+Oxygen elements voor woocommerce
+
+Deze plugin 'Fetum prijzen plugin
+
+
+
+Dit is een wordpress plugin special voor Fetum met deze mogelijkheden:
+
+
+ -- aanpassing van Woocommerce zodat bulk prijzen mogelijk zijn --
+Er is extra entry in de woocommerce producten waar deze prijzen kunnen worden ingevoerd
+
+
+-- status lijn boven pagina
+In het dashboar is nu bij instelling een extra element: statuslijn
+hier kan een text (in gewenste voor en achtergrond kleur) opgegeven worden
+Lijn is actief tussen de opgegeven start en eind data (inclusief)
+lijn is uitgeschakelt op het dasboard.
+
+
+keuze menu voor klanten op category, subcategory en produckt
+zie toelichting in file Fetum-Bulk_Plugin.php
+Ook de file prod-overzicht.js is hierbij nodig. De info wordt bij het laden van de pagina met ajax geladen om sneller te zijn
+
+Maakt een keuze category/subcategory en produkt op de pagina
+Maak daarvoor in oxygen 3 div in een section
+1e div: categorien
+2e div: subCategoryontainer
+3e div: productenContainer
+
+plaats in de 1e div een shortcode:
+[mijn_categorieen doel_id="categorien"]
+
+plaats in de section een code block om aangepaste css te kunnen gebruiken
+
+de css staat hiernaast als categorie css. 
+kopieer de inhoud van deze file in zijn geheel naar css van het codeblock in oxygen
+
+de paginastructuur is dus
+body
+ - section
+    - div  (1)
+        -shortcode
+    -div  (2)
+    -div  (3)
+        -code block
+
+geef de div's ids zodat JS en css ze kan vinden.
+
+
+De produktpaginas
+- prijsinfo en produkt omschrijving wordt ingevoerd in de woocommerce productinfo
+
+de titel is zoals het product heet en door het systeem wordt gebruikt
+Bij de productbeschrijving alle info invoeren, dit komt op de pagina
+
+Er zijn 3 prijzen:
+prijs per doos bij 1,2 of 4 dozen. Vul hier het totaal bedrag in van de bestelling ex btw. 
+systeem laat prijs per stuk zien, en de totaalprijs in en ex btw
+aantal per doos is het verkoop aantal zoals ik hanteer
+
+Bij categorien wordt gefilterd op categorie en subcategorie. vul dit zorgvuldig in om het duidelijk te maken voor de klant
+
+bij aangepaste product pagina URL kan de link naar de pagina waar het product staat worden ingevoerd.
+Iedere product verdient een eigen pagina en dat wordt op deze manier gerealiseerd
+
+De productpaginas:
+De shortcode: [product_description id="26"] laat de product info zien
+bestellen gaat via de shortcode [order_buttons id="26"]
+de id het id van het product wat woo het gegeven heeft
+
+Verder kan de pagina vrij opgemaakt en aangepast worden
+
+de header toont de kleine woo winkelwagen als er iets in het mandje zit

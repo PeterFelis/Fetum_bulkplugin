@@ -1,0 +1,38 @@
+/* Stijlen voor hover en actieve staat */
+.hoofdCategorie:hover, .hoofdCategorie.actief {
+    text-decoration: underline;
+    font-weight: bold; /* Maakt actieve of gehoverde hoofdcategorieën opvallender */
+}
+
+.subCategorie:hover, .subCategorie.actief {
+    text-decoration: underline;
+    font-weight: bold; /* Maakt actieve of gehoverde subcategorieën opvallender */
+}
+
+.product-item:hover, .product-item.actief-product {
+    border: 2px solid #000; /* Voegt een duidelijke border toe aan gehoverde of actieve producten */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* Optionele schaduw voor extra nadruk */
+}
+
+/* Zorgt voor voldoende ruimte en visuele scheiding tussen categorieën, subcategorieën en producten */
+.hoofdCategorie, .subCategorie, .product-item {
+    margin-bottom: 10px;
+    display: block; /* Zorgt dat elk item op zijn eigen regel staat */
+}
+
+/* Optioneel: verdere aanpassingen voor de product-items */
+.product-item {
+    padding: 5px; /* Voegt wat binnenruimte toe */
+    margin-right: 10px; /* Zorgt voor wat ruimte rechts van elk product-item, als ze naast elkaar staan */
+    display: inline-block; /* Als je wilt dat product-items naast elkaar staan in plaats van op aparte regels */
+    vertical-align: top; /* Helpt bij de uitlijning wanneer producten naast elkaar worden weergegeven */
+}
+
+/* Een duidelijke visuele stijl voor producttitels binnen de product-items */
+.product-item p {
+    margin: 0; /* Verwijdert de standaard marge van paragrafen om ruimte te besparen */
+    padding-top: 5px; /* Voegt wat ruimte toe boven de producttitel */
+    font-size: 0.9em; /* Maakt de tekst een beetje kleiner voor compactheid */
+}
+
+

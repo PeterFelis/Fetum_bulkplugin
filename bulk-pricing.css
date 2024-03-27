@@ -1,0 +1,4 @@
+/* filenaam: bulk-pricing.css  */
+
+.woocommerce_options_panel ._sale_price_field 
+{ display: none; }
